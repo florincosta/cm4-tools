@@ -404,6 +404,18 @@ const struct programmer_entry programmer_table[] = {
 	},
 #endif
 
+#if CONFIG_VL805 == 1
+	{
+		.name			= "vl805",
+		.type			= PCI,
+		.devs.dev		= devs_vl805,
+		.init			= vl805_init,
+		.map_flash_region	= fallback_map,
+		.unmap_flash_region	= fallback_unmap,
+		.delay			= internal_delay,
+	},
+#endif
+
 	{0}, /* This entry corresponds to PROGRAMMER_INVALID. */
 };
 

@@ -111,6 +111,9 @@ enum programmer {
 #if CONFIG_CH341A_SPI == 1
 	PROGRAMMER_CH341A_SPI,
 #endif
+#if CONFIG_VL805 == 1
+  PROGRAMMER_VL805,
+#endif
 	PROGRAMMER_INVALID /* This must always be the last entry. */
 };
 
@@ -542,6 +545,13 @@ int ch341a_spi_init(void);
 void ch341a_spi_delay(unsigned int usecs);
 extern const struct dev_entry devs_ch341a_spi[];
 #endif
+
+/* vl805.c */
+#if CONFIG_VL805 == 1
+int vl805_init(void);
+extern const struct dev_entry devs_vl805[];
+#endif
+
 
 /* flashrom.c */
 struct decode_sizes {

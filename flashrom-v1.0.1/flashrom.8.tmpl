@@ -301,6 +301,8 @@ bitbanging adapter)
 .sp
 .BR "* ch341a_spi" " (for SPI flash ROMs attached to WCH CH341A)"
 .sp
+.BR "* vl805" " (for SPI flash ROMs attached to the VIA VL805 PCIe USB 3.0 Host controller)"
+.sp
 Some programmers have optional or mandatory parameters which are described
 in detail in the
 .B PROGRAMMER-SPECIFIC INFORMATION
@@ -1063,6 +1065,10 @@ Please also note that the mstarddc_spi driver only works on Linux.
 .BR "ch341a_spi " programmer
 The WCH CH341A programmer does not support any parameters currently. SPI frequency is fixed at 2 MHz, and CS0 is
 used as per the device.
+.BR "vl805 " programmer
+This module supports SPI flash programming through the VL805/VL806 PCIe-USB 3.0
+Host controller.
+.SS
 .SH EXAMPLES
 To back up and update your BIOS, run
 .sp
@@ -1138,6 +1144,9 @@ can be run as normal user on most operating systems if appropriate device
 permissions are set.
 .sp
 .B ogp
+needs PCI configuration space read access and raw memory access.
+.sp
+.B vl805
 needs PCI configuration space read access and raw memory access.
 .sp
 On OpenBSD, you can obtain raw access permission by setting

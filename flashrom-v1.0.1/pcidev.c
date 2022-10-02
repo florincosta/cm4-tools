@@ -25,7 +25,23 @@
 #include "programmer.h"
 #include "hwaccess.h"
 
+
+struct device {
+  struct device *next;
+  struct pci_dev *dev;
+  /* Bus topology calculated by grow_tree() */
+  struct device *bus_next;
+  struct bus *parent_bus;
+  struct bridge *bridge;
+  /* Cache */
+  int no_config_access;
+  unsigned int config_cached, config_bufsize;
+  u8 *config;				/* Cached configuration space data */
+  u8 *present;			/* Maps which configuration bytes are present */
+};
+
 struct pci_access *pacc;
+struct pci_filter filter;
 
 enum pci_bartype {
 	TYPE_MEMBAR,
@@ -164,8 +180,72 @@ static int pcidev_shutdown(void *data)
 	return 0;
 }
 
+int config_fetch(struct device *d, unsigned int pos, unsigned int len)
+{
+  unsigned int end = pos+len;
+  int result;
+
+  while (pos < d->config_bufsize && len && d->present[pos])
+    pos++, len--;
+  while (pos+len <= d->config_bufsize && len && d->present[pos+len-1])
+    len--;
+  if (!len)
+    return 1;
+
+  if (end > d->config_bufsize) {
+    int orig_size = d->config_bufsize;
+    while (end > d->config_bufsize)
+	      d->config_bufsize *= 2;
+    d->config = realloc(d->config, d->config_bufsize);
+    d->present = realloc(d->present, d->config_bufsize);
+    memset(d->present + orig_size, 0, d->config_bufsize - orig_size);
+  }
+  result = pci_read_block(d->dev, pos, d->config + pos, len);
+  if (result)
+    memset(d->present + pos, 1, len);
+  return result;
+}
+
+struct device *scan_device(struct pci_dev *p)
+{
+  struct device *d;
+
+  // if (p->domain && !opt_domains)
+  //   opt_domains = 1;
+  // if (!pci_filter_match(&filter, p) && !need_topology)
+  //   return NULL;
+  d = malloc(sizeof(struct device));
+  memset(d, 0, sizeof(*d));
+  d->dev = p;
+  // d->no_config_access = p->no_config_access;
+  d->config_cached = d->config_bufsize = 64;
+  d->config = malloc(64);
+  d->present = malloc(64);
+  memset(d->present, 1, 64);
+  if (!d->no_config_access && !pci_read_block(p, 0, d->config, 64))
+    {
+      d->no_config_access = 1;
+      d->config_cached = d->config_bufsize = 0;
+      memset(d->present, 0, 64);
+    }
+  if (!d->no_config_access && (d->config[PCI_HEADER_TYPE] & 0x7f) == PCI_HEADER_TYPE_CARDBUS)
+    {
+      /* For cardbus bridges, we need to fetch 64 bytes more to get the
+       * full standard header... */
+      if (config_fetch(d, 64, 64))
+	      d->config_cached += 64;
+    }
+  pci_setup_cache(p, d->config, d->config_cached);
+  pci_fill_info(p, PCI_FILL_IDENT | PCI_FILL_CLASS);
+  return d;
+}
+
 int pci_init_common(void)
 {
+  struct device *d;
+  struct pci_dev *p;
+	struct device *first_dev = NULL;
+
 	if (pacc != NULL) {
 		msg_perr("%s: Tried to allocate a new PCI context, but there is still an old one!\n"
 			 "Please report a bug at flashrom@flashrom.org\n", __func__);
@@ -176,6 +256,13 @@ int pci_init_common(void)
 	if (register_shutdown(pcidev_shutdown, NULL))
 		return 1;
 	pci_scan_bus(pacc);     /* We want to get the list of devices */
+
+	for (p = pacc->devices; p; p=p->next)
+    if ((d = scan_device(p))) {
+			d->next = first_dev;
+			first_dev = d;
+    }
+
 	return 0;
 }
 
@@ -188,12 +275,11 @@ struct pci_dev *pcidev_init(const struct dev_entry *devs, int bar)
 {
 	struct pci_dev *dev;
 	struct pci_dev *found_dev = NULL;
-	struct pci_filter filter;
 	char *pcidev_bdf;
 	char *msg = NULL;
 	int found = 0;
 	int i;
-	uintptr_t addr = 0;
+	// uintptr_t addr = 0;
 
 	if (pci_init_common() != 0)
 		return NULL;
@@ -208,9 +294,9 @@ struct pci_dev *pcidev_init(const struct dev_entry *devs, int bar)
 		}
 	}
 	free(pcidev_bdf);
-
 	for (dev = pacc->devices; dev; dev = dev->next) {
 		if (pci_filter_match(&filter, dev)) {
+			pci_fill_info(dev, PCI_FILL_IDENT);
 			/* Check against list of supported devices. */
 			for (i = 0; devs[i].device_name != NULL; i++)
 				if ((dev->vendor_id == devs[i].vendor_id) &&
@@ -233,10 +319,10 @@ struct pci_dev *pcidev_init(const struct dev_entry *devs, int bar)
 			/* FIXME: We should count all matching devices, not
 			 * just those with a valid BAR.
 			 */
-			if ((addr = pcidev_readbar(dev, bar)) != 0) {
+			// if ((addr = pcidev_readbar(dev, bar)) != 0) {
 				found_dev = dev;
 				found++;
-			}
+			// }
 		}
 	}
 

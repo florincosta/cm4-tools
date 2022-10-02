@@ -632,6 +632,9 @@ CONFIG_IT8212 ?= yes
 # Winchiphead CH341A
 CONFIG_CH341A_SPI ?= yes
 
+# Enable VIA VL805 programmer for now.
+CONFIG_VL805 ?= yes
+
 # Disable wiki printing by default. It is only useful if you have wiki access.
 CONFIG_PRINT_WIKI ?= no
 
@@ -918,6 +921,12 @@ ifeq ($(CONFIG_CH341A_SPI), yes)
 FEATURE_CFLAGS += -D'CONFIG_CH341A_SPI=1'
 PROGRAMMER_OBJS += ch341a_spi.o
 NEED_LIBUSB1 += CONFIG_CH341A_SPI
+endif
+
+ifeq ($(CONFIG_VL805), yes)
+FEATURE_CFLAGS += -D'CONFIG_VL805=1'
+PROGRAMMER_OBJS += vl805.o
+NEED_LIBPCI += CONFIG_VL805
 endif
 
 ifneq ($(NEED_SERIAL), )
