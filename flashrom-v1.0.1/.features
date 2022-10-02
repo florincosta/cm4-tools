@@ -1,0 +1,5 @@
+FEATURES := yes
+FTDISUPPORT := no
+LINUX_SPI_SUPPORT := yes
+UTSNAME := yes
+CLOCK_GETTIME := yes

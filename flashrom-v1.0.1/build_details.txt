@@ -1,0 +1,1094 @@
+Build started on Sun 02 Oct 2022 08:59:56 PM EEST
+
+exec: export LC_ALL=C ; { cc  -E os.h 2>/dev/null | grep -v ^# | grep ' | cut -f 2 -d' ; }
+Linux
+
+exec: export LC_ALL=C ; { cc  -E archtest.c 2>/dev/null | grep -v ^# | grep ' | cut -f 2 -d' ; }
+arm
+
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR="" ; pkg-config --libs libftdi1 || pkg-config --libs libftdi || printf "%s" "-lftdi -lusb" ; }
+Package libftdi1 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `libftdi1.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'libftdi1' found
+Package libftdi was not found in the pkg-config search path.
+Perhaps you should add the directory containing `libftdi.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'libftdi' found
+-lftdi -lusb
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR="" ; pkg-config --cflags-only-I libftdi1 ; }
+Package libftdi1 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `libftdi1.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'libftdi1' found
+
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR="" ; pkg-config --libs libusb || printf "%s" "-lusb" ; }
+-lusb
+
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+Checking for a C compiler... 
+exec: cc -I/usr/include/libusb-1.0 -Os -Wall -Wshadow -Werror -Wno-error=deprecated-declarations  .test.c -o .test
+found.
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --libs libusb-1.0  || printf "%s" "-lusb-1.0" ; }
+-lusb-1.0
+
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --libs libusb-1.0  || printf "%s" "-lusb-1.0" ; }
+-lusb-1.0
+
+Checking for libpci headers... 
+exec: cc -c -I/usr/include/libusb-1.0 -Os -Wall -Wshadow -Werror -Wno-error=deprecated-declarations .test.c -o .test.o
+found.
+Checking version of pci_get_dev... 
+exec: cc -c -I/usr/include/libusb-1.0 -Os -Wall -Wshadow -Werror -Wno-error=deprecated-declarations .test.c -o .test.o
+new version (including PCI domain parameter).
+Checking if libpci is present and sufficient... 
+exec: cc  .test.o -o .test  -lpci
+yes.
+Checking for libusb-0.1/libusb-compat headers... 
+exec: cc -c -I/usr/include/libusb-1.0 -Os -Wall -Wshadow -Werror -Wno-error=deprecated-declarations .test.c -o .test.o
+found.
+Checking if libusb-0.1 is usable... 
+exec: cc  .test.o -o .test  -lusb
+yes.
+Checking for libusb-1.0 headers... 
+exec: cc -c -I/usr/include/libusb-1.0 -Os -Wall -Wshadow -Werror -Wno-error=deprecated-declarations .test.c -o .test.o
+found.
+Checking if libusb-1.0 is usable... 
+exec: cc  .test.o -o .test  -lusb-1.0
+yes.
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+Checking for FTDI support... 
+exec: cc -I/usr/include/libusb-1.0 -Os -Wall -Wshadow -Werror -Wno-error=deprecated-declarations   .featuretest.c -o .featuretest -lftdi -lusb 
+.featuretest.c:2:10: fatal error: ftdi.h: No such file or directory
+    2 | #include <ftdi.h>
+      |          ^~~~~~~~
+compilation terminated.
+not found.
+Checking if Linux SPI headers are present... 
+exec: cc -I/usr/include/libusb-1.0 -Os -Wall -Wshadow -Werror -Wno-error=deprecated-declarations  .featuretest.c -o .featuretest
+yes.
+Checking for utsname support... 
+exec: cc -I/usr/include/libusb-1.0 -Os -Wall -Wshadow -Werror -Wno-error=deprecated-declarations  .featuretest.c -o .featuretest
+found.
+Checking for clock_gettime support... 
+exec: cc -I/usr/include/libusb-1.0 -Os -Wall -Wshadow -Werror -Wno-error=deprecated-declarations  -lrt .featuretest.c -o .featuretest
+found.
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --cflags-only-I libusb-1.0  || printf "%s" "-I/usr/include/libusb-1.0" ; }
+-I/usr/include/libusb-1.0
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_FT2232_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-DCONFIG_USBBLASTER_SPI=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "FT232H := yes" .features && printf "%s" "-DHAVE_FT232H=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "LINUX_SPI_SUPPORT := yes" .features && printf "%s" "-DCONFIG_LINUX_SPI=1" ; }
+-D'CONFIG_LINUX_SPI=1'
+exec: export LC_ALL=C ; { grep -q "OLD_PCI_GET_DEV := yes" .libdeps && printf "%s" "-DOLD_PCI_GET_DEV=1" ; }
+
+exec: export LC_ALL=C ; { grep -q "UTSNAME := yes" .features && printf "%s" "-DHAVE_UTSNAME=1" ; }
+-D'HAVE_UTSNAME=1'
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-DHAVE_CLOCK_GETTIME=1" ; }
+-D'HAVE_CLOCK_GETTIME=1'
+exec: export LC_ALL=C ; { grep -q "FTDISUPPORT := yes" .features && printf "%s" "-lftdi -lusb" ; }
+
+exec: export LC_ALL=C ; { grep -q "NEEDLIBZ := yes" .libdeps && printf "%s" "-lz" ; }
+
+exec: export LC_ALL=C ; { grep -q "CLOCK_GETTIME := yes" .features && printf "%s" "-lrt" ; }
+-lrt
+exec: export LC_ALL=C ; { [ -n "" ] && export PKG_CONFIG_LIBDIR=""; pkg-config --libs libusb-1.0  || printf "%s" "-lusb-1.0" ; }
+-lusb-1.0
+
