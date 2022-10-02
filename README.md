@@ -21,16 +21,16 @@ Build using make
 
 ## Using flashrom
 
-Write bin file
+Write bin file:
 
 `sudo ./flashrom -p vl805 -w ../firmware/vl805_fw_0138a1_padded_8Mb.bin -V`
 
 
-## Padding files
+## Padding files with 0xFF to the required size
 
-First, create a 128K file of all zeros:
+First, create a 1MB(8Mb) file of all 0xFF:
 
-`dd if=/dev/zero bs=1024 count=128 of=padded.bin`
+`dd if=/dev/zero bs=1024 count=1024 | tr "\000" "\377" >padded.bin`
 
 Then, write the BIN to the file without truncating the result:
 
